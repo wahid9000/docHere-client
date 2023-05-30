@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home/Home";
+import DoctorProfile from "../Pages/DoctorProfile/DoctorProfile/DoctorProfile";
+
 
 const router = createBrowserRouter([
     {
@@ -11,6 +13,11 @@ const router = createBrowserRouter([
             {
                 path:'/',
                 element: <Home></Home>
+            },
+            {
+                path: '/doctorProfile/:id',
+                element: <DoctorProfile></DoctorProfile>,
+                loader: ({params}) => fetch(`http://localhost:5000/doctors/${params.id}`)
             }
         ]
     },

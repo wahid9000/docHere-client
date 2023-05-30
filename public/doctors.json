@@ -1,6 +1,6 @@
 [
     {
-        "_id": 1,
+
         "image": "https://i.ibb.co/3fTbKfk/doctor3.jpg",
         "name": "Dr. John Smith",
         "doctor_level": "General Practitioner",
@@ -16,7 +16,7 @@
         "available_days": ["Monday", "Wednesday", "Friday"]
       },
       {
-        "_id": 2,
+ 
         "image": "https://i.ibb.co/cwjYTmX/doctor1.jpg",
         "name": "Dr. Emily Johnson",
         "doctor_level": "BTP -  Senior Physiotherapist",
@@ -32,7 +32,7 @@
       },
 
       {
-        "_id": 3,
+
         "image": "https://i.ibb.co/wLzxHHw/doctor2.jpg",
         "name": "Dr. Sarah Williams",
         "doctor_level": "BTP -  Senior Physiotherapist",
@@ -48,7 +48,7 @@
         "available_days": ["Monday", "Wednesday", "Friday"]
       },
       {
-        "_id": 4,
+   
         "name": "Dr. Michael Brown",
         "image": "https://i.ibb.co/3fTbKfk/doctor3.jpg",
         "doctor_level": "BTP -  Senior Physiotherapist",
@@ -64,7 +64,7 @@
         "available_days": ["Tuesday", "Thursday", "Saturday"]
       },
       {
-        "_id": 5,
+ 
         "name": "Dr. Jennifer Davis",
         "image": "https://i.ibb.co/cwjYTmX/doctor1.jpg",
         "doctor_level": "BTP -  Senior Physiotherapist",
@@ -80,7 +80,7 @@
         "available_days": ["Monday", "Wednesday", "Friday"]
       },
       {
-        "_id": 6,
+   
         "name": "Dr. Robert Thompson",
         "image": "https://i.ibb.co/3fTbKfk/doctor3.jpg",
         "doctor_level": "BTP -  Senior Physiotherapist",
@@ -95,7 +95,7 @@
         "available_days": ["Tuesday", "Thursday", "Saturday"]
       },
       {
-        "_id": 7,
+ 
         "name": "Dr. Jessica Roberts",
         "doctor_level": "BTP -  Senior Physiotherapist",
         "image": "https://i.ibb.co/wLzxHHw/doctor2.jpg",
@@ -111,7 +111,6 @@
         "available_days": ["Monday", "Wednesday", "Friday"]
       },
       {
-        "_id": 8,
         "name": "Dr. David Wilson",
         "image": "https://i.ibb.co/3fTbKfk/doctor3.jpg",
         "doctor_level": "BTP -  Senior Physiotherapist",
@@ -127,7 +126,6 @@
         "available_days": ["Tuesday", "Thursday", "Saturday"]
       },
       {
-        "_id": 9,
         "name": "Dr. Olivia Martinez",
         "image": "https://i.ibb.co/cwjYTmX/doctor1.jpg",
         "doctor_level": "BTP -  Senior Physiotherapist",
@@ -143,7 +141,6 @@
         "available_days": ["Monday", "Wednesday", "Friday"]
       },
       {
-        "_id": 10,
         "name": "Dr. Samantha Lee",
         "image": "https://i.ibb.co/wLzxHHw/doctor2.jpg",
         "doctor_level": "BTP -  Senior Physiotherapist",
