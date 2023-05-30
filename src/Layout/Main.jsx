@@ -1,15 +1,18 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "../Pages/Shared/Navbar/Navbar";
 import Footer from "../Pages/Shared/Footer/Footer";
 
+
 const Main = () => {
+    const location = useLocation()
+    const isLogin = location.pathname.includes('login') || location.pathname.includes('register');
     return (
         <div>
             <div className="min-h-screen">
-                <Navbar></Navbar>
+                { isLogin || <Navbar></Navbar>}
                 <Outlet></Outlet>
             </div>
-            <Footer></Footer>
+            {isLogin || <Footer></Footer>}
         </div>
     );
 };

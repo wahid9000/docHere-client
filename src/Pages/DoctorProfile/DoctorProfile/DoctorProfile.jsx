@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { useLoaderData } from "react-router-dom";
 import PageHeader from '../../../Components/PageHeader/PageHeader';
 import DoctorCard from '../DoctorCard/DoctorCard';
+import DoctorInfoTab from '../DoctorInfoTab/DoctorInfo/DoctorInfoTab';
 
 
 
@@ -21,6 +22,8 @@ const DoctorProfile = () => {
             ></PageHeader>
 
            <DoctorCard doctorsInfo= {doctorsInfo}></DoctorCard>
+
+           <DoctorInfoTab doctorsInfo= {doctorsInfo}></DoctorInfoTab>
 
         </div>
     );
