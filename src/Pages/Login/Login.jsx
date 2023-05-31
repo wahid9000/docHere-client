@@ -1,10 +1,33 @@
-import { FaGoogle } from 'react-icons/fa';
 import image from '../../assets/login.png'
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import SocilaLogin from '../../Components/SocialLogin/SocilaLogin';
+import { useContext } from 'react';
+import { AuthContext } from '../Provider/AuthProvider';
+
+
 const Login = () => {
+
+    const {loginUser} = useContext(AuthContext)
+    const navigate = useNavigate()
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || '/';
 
     const handleLogin = event => {
         event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+
+        loginUser(email, password)
+        .then(result => {
+            const loggedUser = result.user;
+            console.log(loggedUser);
+            navigate(from, {replace: true});
+        })
+        .catch(error => console.log(error))
+        
+
     }
     return (
         <div className='grid md:grid-cols-2 gap-10'>
@@ -25,10 +48,7 @@ const Login = () => {
                     </div>
                 </form>
                 <p className='mt-5 text-center'>Do not Have an Account? <Link to='/register'>Register Now!</Link></p>
-                <div className="divider text-left">OR</div>
-                <div className='text-center'>
-                     <button className='btn btn-outline'><FaGoogle className='mr-2'></FaGoogle> Continue With Google</button>
-                </div>
+                <SocilaLogin></SocilaLogin>
                
             </div>
         </div>

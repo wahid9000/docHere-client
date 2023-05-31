@@ -4,6 +4,8 @@ import Home from "../Pages/Home/Home/Home";
 import DoctorProfile from "../Pages/DoctorProfile/DoctorProfile/DoctorProfile";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import About from "../Pages/About/About";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -28,6 +30,10 @@ const router = createBrowserRouter([
             {
                 path:'/register',
                 element: <Register></Register>
+            },
+            {
+                path: '/about',
+                element: <PrivateRoute><About></About></PrivateRoute>
             }
         ]
     },
