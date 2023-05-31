@@ -1,8 +1,11 @@
+import { Helmet } from "react-helmet-async";
+import PageHeader from "../../Components/PageHeader/PageHeader";
 
 const About = () => {
     return (
-        <div className="flex justify-center items-center">
-            <h2 className="text-6xl font-bold">About Page</h2>
+        <div>
+            <Helmet><title>DocHere | Book Appointment</title></Helmet>
+            <PageHeader heading={'About Us'} subHeading={'Home / About Us'}></PageHeader>
         </div>
     );
 };

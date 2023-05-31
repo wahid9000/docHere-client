@@ -1,9 +1,9 @@
 [
     {
-
         "image": "https://i.ibb.co/3fTbKfk/doctor3.jpg",
         "name": "Dr. John Smith",
-        "doctor_level": "General Practitioner",
+        "doctor_level": "BTP - Senior Dentist",
+        "service": "Teeth Orthodontics",
         "ratings": 4.8,
         "location": "123 Main Street, Cityville",
         "available_datetime": "6:00 PM - 9:00 PM",
@@ -12,14 +12,14 @@
         "education_history": "Medical Degree from University XYZ",
         "awards": ["Best General Practitioner 2018", "Top Doctor Award 2020"],
         "work_experience": "Worked at ABC Hospital for 8 years",
-        "services": ["General check-ups", "Minor surgeries"],
         "available_days": ["Monday", "Wednesday", "Friday"]
       },
       {
  
         "image": "https://i.ibb.co/cwjYTmX/doctor1.jpg",
         "name": "Dr. Emily Johnson",
-        "doctor_level": "BTP -  Senior Physiotherapist",
+        "doctor_level": "BTP - Senior Dentist",
+        "service": "Cosmetic Dentisty",
         "ratings": 4.9,
         "location": "456 Elm Street, Townsville",
         "available_datetime": "6:00 PM - 9:00 PM",
@@ -27,7 +27,7 @@
         "about_me": "I am Dr. John Smith, a dedicated and compassionate general practitioner with several years of experience. I provide comprehensive medical care to patients of all ages, focusing on preventive care, accurate diagnoses, and effective treatment plans. I specialize in promoting wellness, managing acute illnesses, and overseeing chronic conditions. Building strong doctor-patient relationships based on trust and open communication is fundamental to my practice. I stay updated with the latest advancements in medicine through continuous education, ensuring the highest quality of care. Patient education is a priority for me, and I take the time to explain medical conditions and treatment options to empower my patients.",
         "education_history": "Medical Degree from University ABC, Cardiology Fellowship at XYZ Hospital",
         "awards": ["Outstanding Cardiologist 2019", "Excellence in Research Award 2021"],
-        "services": ["Cardiac screenings", "Angioplasty", "Echocardiography"],
+  
         "available_days": ["Tuesday", "Thursday", "Saturday"]
       },
 
@@ -35,7 +35,8 @@
 
         "image": "https://i.ibb.co/wLzxHHw/doctor2.jpg",
         "name": "Dr. Sarah Williams",
-        "doctor_level": "BTP -  Senior Physiotherapist",
+        "service": "Teeth Cleaning",
+        "doctor_level": "BTP - Senior Dentist",
         "ratings": 4.7,
         "location": "789 Oak Avenue, Villageland",
         "available_datetime": "6:00 PM - 9:00 PM",
@@ -44,14 +45,15 @@
         "education_history": "Medical Degree from University DEF, Pediatric Residency at XYZ Hospital",
         "awards": ["Top Pediatrician 2021", "Outstanding Service Award 2022"],
         "work_experience": "9 years of experience in pediatrics",
-        "services": ["Well-child visits", "Vaccinations", "Childhood illness treatment"],
+
         "available_days": ["Monday", "Wednesday", "Friday"]
       },
       {
    
         "name": "Dr. Michael Brown",
         "image": "https://i.ibb.co/3fTbKfk/doctor3.jpg",
-        "doctor_level": "BTP -  Senior Physiotherapist",
+        "service": "Cavity Protection",
+        "doctor_level": "BTP - Junior Dentist",
         "ratings": 4.5,
         "location": "789 Oak Avenue, Villageland",
         "available_datetime": "6:00 PM - 9:00 PM",
@@ -60,14 +62,15 @@
         "education_history": "Medical Degree from University GHI, Orthopedic Residency at XYZ Hospital",
         "awards": ["Best Orthopedic Surgeon 2020", "Sports Medicine Excellence Award 2021"],
         "work_experience": "12 years of experience in orthopedic surgery",
-        "services": ["Joint replacements", "Sports injury treatment", "Fracture care"],
+
         "available_days": ["Tuesday", "Thursday", "Saturday"]
       },
       {
  
         "name": "Dr. Jennifer Davis",
         "image": "https://i.ibb.co/cwjYTmX/doctor1.jpg",
-        "doctor_level": "BTP -  Senior Physiotherapist",
+        "service": "Pediatric Dental",
+        "doctor_level": "BTP - Junior Dentist",
         "ratings": 4.9,
         "location": "321 Pine Street, Villagetown",
         "available_datetime": "6:00 PM - 9:00 PM",
@@ -76,14 +79,15 @@
         "education_history": "Medical Degree from University JKL, OB-GYN Residency at XYZ Hospital",
         "awards": ["Top Gynecologist 2019", "Women's Health Advocate Award 2022"],
         "work_experience": "10 years of experience in gynecology",
-        "services": ["Annual exams", "Prenatal care", "Menopause management"],
+
         "available_days": ["Monday", "Wednesday", "Friday"]
       },
       {
    
         "name": "Dr. Robert Thompson",
         "image": "https://i.ibb.co/3fTbKfk/doctor3.jpg",
-        "doctor_level": "BTP -  Senior Physiotherapist",
+        "service": "Oral Surgery",
+        "doctor_level": "BTP - Junior Dentist",
         "ratings": 4.6,
         "location": "987 Cedar Street, Citytown",
         "available_datetime": "6:00 PM - 9:00 PM",
@@ -91,29 +95,31 @@
         "about_me": "I am Dr. John Smith, a dedicated and compassionate general practitioner with several years of experience. I provide comprehensive medical care to patients of all ages, focusing on preventive care, accurate diagnoses, and effective treatment plans. I specialize in promoting wellness, managing acute illnesses, and overseeing chronic conditions. Building strong doctor-patient relationships based on trust and open communication is fundamental to my practice. I stay updated with the latest advancements in medicine through continuous education, ensuring the highest quality of care. Patient education is a priority for me, and I take the time to explain medical conditions and treatment options to empower my patients.",
         "education_history": "Medical Degree from University MNO, Neurology Fellowship at XYZ Hospital",
         "awards": ["Outstanding Dentist 2015"],
-        "services": ["Headache management", "Epilepsy treatment", "Stroke care"],
+
         "available_days": ["Tuesday", "Thursday", "Saturday"]
       },
       {
  
         "name": "Dr. Jessica Roberts",
-        "doctor_level": "BTP -  Senior Physiotherapist",
+        "service": "Oral Surgery",
         "image": "https://i.ibb.co/wLzxHHw/doctor2.jpg",
         "ratings": 4.8,
         "location": "555 Oak Lane, Eyetown",
+        "doctor_level": "BTP - Expert Dentist",
         "available_datetime": "6:00 PM - 9:00 PM",
         "price": "$160",
         "about_me": "I am Dr. John Smith, a dedicated and compassionate general practitioner with several years of experience. I provide comprehensive medical care to patients of all ages, focusing on preventive care, accurate diagnoses, and effective treatment plans. I specialize in promoting wellness, managing acute illnesses, and overseeing chronic conditions. Building strong doctor-patient relationships based on trust and open communication is fundamental to my practice. I stay updated with the latest advancements in medicine through continuous education, ensuring the highest quality of care. Patient education is a priority for me, and I take the time to explain medical conditions and treatment options to empower my patients.",
         "education_history": "Medical Degree from University PQR, Ophthalmology Residency at XYZ Hospital",
         "awards": ["Top Ophthalmologist 2021", "Excellence in Cataract Surgery Award 2022"],
         "work_experience": "11 years of experience in ophthalmology",
-        "services": ["Comprehensive eye exams", "Cataract surgery", "Glaucoma management"],
+ 
         "available_days": ["Monday", "Wednesday", "Friday"]
       },
       {
         "name": "Dr. David Wilson",
         "image": "https://i.ibb.co/3fTbKfk/doctor3.jpg",
-        "doctor_level": "BTP -  Senior Physiotherapist",
+        "service": "Teeth Orthodontics",
+        "doctor_level": "BTP - Expert Dentist",
         "ratings": 4.7,
         "location": "777 Maple Avenue, Mindville",
         "available_datetime": "6:00 PM - 9:00 PM",
@@ -122,13 +128,14 @@
         "education_history": "Medical Degree from University STU, Psychiatry Residency at XYZ Hospital",
         "awards": ["Outstanding Psychiatrist 2020", "Advocate for Mental Health Award 2021"],
         "work_experience": "9 years of experience in psychiatry",
-        "services": ["Psychotherapy", "Medication management", "Depression and anxiety treatment"],
+
         "available_days": ["Tuesday", "Thursday", "Saturday"]
       },
       {
         "name": "Dr. Olivia Martinez",
         "image": "https://i.ibb.co/cwjYTmX/doctor1.jpg",
-        "doctor_level": "BTP -  Senior Physiotherapist",
+        "service": "Cosmetic Dentisty",
+        "doctor_level": "BTP - Expert Dentist",
         "ratings": 4.9,
         "location": "999 Elm Street, Earville",
         "available_datetime": "6:00 PM - 9:00 PM",
@@ -137,13 +144,14 @@
         "education_history": "Medical Degree from University VWX, ENT Residency at XYZ Hospital",
         "awards": ["Top ENT Specialist 2019", "Excellence in Sinus Surgery Award 2022"],
         "work_experience": "10 years of experience in ENT",
-        "services": ["Ear infections", "Sinusitis treatment", "Tonsillectomy"],
+
         "available_days": ["Monday", "Wednesday", "Friday"]
       },
       {
         "name": "Dr. Samantha Lee",
         "image": "https://i.ibb.co/wLzxHHw/doctor2.jpg",
-        "doctor_level": "BTP -  Senior Physiotherapist",
+        "service": "Teeth Cleaning",
+        "doctor_level": "BTP - Senior Dentist",
         "ratings": 4.7,
         "location": "789 Oak Avenue, Villageland",
         "available_datetime": "6:00 PM - 9:00 PM",
@@ -151,7 +159,6 @@
         "about_me": "I am Dr. John Smith, a dedicated and compassionate general practitioner with several years of experience. I provide comprehensive medical care to patients of all ages, focusing on preventive care, accurate diagnoses, and effective treatment plans. I specialize in promoting wellness, managing acute illnesses, and overseeing chronic conditions. Building strong doctor-patient relationships based on trust and open communication is fundamental to my practice. I stay updated with the latest advancements in medicine through continuous education, ensuring the highest quality of care. Patient education is a priority for me, and I take the time to explain medical conditions and treatment options to empower my patients.",
         "education_history": "Medical Degree from University DEF, Dermatology Residency at XYZ Hospital",
         "awards": ["Best Dermatologist 2020", "Researcher of the Year 2017"],
-        "services": ["Acne treatment", "Skin cancer screening", "Laser therapy"],
         "available_days": ["Monday", "Wednesday", "Friday"]
       }
 ]

@@ -6,6 +6,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import About from "../Pages/About/About";
 import PrivateRoute from "./PrivateRoute";
+import BookAppointment from "../Pages/BookAppointment/BookAppointment/BookAppointment";
 
 
 const router = createBrowserRouter([
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/doctorProfile/:id',
-                element: <DoctorProfile></DoctorProfile>,
+                element: <PrivateRoute><DoctorProfile></DoctorProfile></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/doctors/${params.id}`)
             },
             {
@@ -34,6 +35,11 @@ const router = createBrowserRouter([
             {
                 path: '/about',
                 element: <PrivateRoute><About></About></PrivateRoute>
+            },
+            {
+                path: '/bookAppointment/:id',
+                element: <BookAppointment></BookAppointment>,
+                loader: ({params}) => fetch(`http://localhost:5000/doctors/${params.id}`)
             }
         ]
     },

@@ -1,0 +1,61 @@
+[
+    {
+        "day": "Thursday",
+        "services": [
+            "Teeth Cleaning",
+            "Oral Surgery"
+        ]
+    },
+    {
+        "day": "Friday",
+        "services": [
+            "Teeth Orthodontics",
+            "Cosmetic Dentistry",
+            "Cavity Protection",
+            "Pediatric Dental"
+        ]
+    },
+    {
+        "day": "Saturday",
+        "services": [
+            "Teeth Orthodontics",
+            "Teeth Cleaning",
+            "Pediatric Dental",
+            "Oral Surgery"
+        ]
+    },
+    {
+        "day": "Sunday",
+        "services": [
+            "Cosmetic Dentistry",
+            "Cavity Protection",
+            "Pediatric Dental",
+            "Oral Surgery"
+        ]
+    },
+    {
+        "day": "Monday",
+        "services": [
+            "Teeth Orthodontics",
+            "Teeth Cleaning",
+            "Cavity Protection",
+            "Oral Surgery"
+        ]
+    },
+    {
+        "day": "Tuesday",
+        "services": [
+            "Cosmetic Dentistry",
+            "Pediatric Dental",
+            "Oral Surgery"
+        ]
+    },
+    {
+        "day": "Wednesday",
+        "services": [
+            "Teeth Orthodontics",
+            "Teeth Cleaning",
+            "Cavity Protection"
+        ]
+    }
+]
