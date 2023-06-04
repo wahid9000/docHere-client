@@ -2,6 +2,10 @@ import { Link, Outlet } from "react-router-dom";
 import Navbar from "../Pages/Shared/Navbar/Navbar";
 
 const Dashboard = () => {
+
+    const isAdmin = 'true';
+
+
     return (
         <div>
             <Navbar></Navbar>
@@ -15,10 +19,22 @@ const Dashboard = () => {
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                     <ul className="menu p-4 w-80 bg-base-100 text-base-content pt-32">
-                        <li><Link className="text-xl" to='/dashboard/myAppointments'>My Appointments</Link></li>
-                        <li><Link className="text-xl" to='/dashboard/myAppointments'>My Reviews</Link></li>     
-                        <li><Link className="text-xl" to='/dashboard/myAppointments'>My Appointment History</Link></li>
-                        <Link to='/'><button className="btn btn-pimary mt-96 ml-4">Return To Home</button></Link>
+
+                        {
+                            isAdmin ?
+                                <>
+                                    <li><Link className="text-xl" to='/dashboard/allUsers'>AllUsers</Link></li>
+                                    <li><Link className="text-xl" to='/dashboard/myAppointments'>Add a Doctor</Link></li>
+                                    <li><Link className="text-xl" to='/dashboard/myAppointments'>Manage Doctors</Link></li>
+                                </>
+                                :
+                                <>
+                                    <li><Link className="text-xl" to='/dashboard/myAppointments'>My Appointments</Link></li>
+                                    <li><Link className="text-xl" to='/dashboard/myAppointments'>My Reviews</Link></li>
+                                    <li><Link className="text-xl" to='/dashboard/myAppointments'>My Appointment History</Link></li>
+                                </>
+                        }
+                        <li><Link to='/'><button className="btn btn-pimary">Return To Home</button></Link></li>
                     </ul>
 
 
