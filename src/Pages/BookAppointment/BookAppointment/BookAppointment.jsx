@@ -16,7 +16,7 @@ const BookAppointment = () => {
         const form = event.target;
         const phone = form.phone.value;
         const date = form.date.value;
-        const bookingInfo = { doctorName: name, patientName: user.displayName, serviceName: service, appointmentTime: date, patientContact: phone }
+        const bookingInfo = { doctorName: name, patientEmail: user.email, patientName: user.displayName, serviceName: service, appointmentTime: date, patientContact: phone }
         console.log(bookingInfo);
 
         fetch('http://localhost:5000/bookedAppointments', {

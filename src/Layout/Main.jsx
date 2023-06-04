@@ -9,7 +9,7 @@ const Main = () => {
     return (
         <div>
             <div className="min-h-screen">
-                { isLogin || <Navbar></Navbar>}
+                {isLogin || <Navbar></Navbar>}
                 <Outlet></Outlet>
             </div>
             {isLogin || <Footer></Footer>}

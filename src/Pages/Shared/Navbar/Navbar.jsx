@@ -13,7 +13,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className="navbar bg-[#35354b] opacity-90 fixed z-10 md:px-40 pt-8 text-white">
+        <div className="navbar bg-[#35354b] opacity-90 fixed z-40 md:px-40 pt-8 text-white">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -37,9 +37,9 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex ">
                 <ul className="menu menu-horizontal px-1 font-bold text-white">
-                    <li><Link>Home</Link></li>
+                    <li><Link to='/'>Home</Link></li>
+                    <li><Link to='/dashboard/myAppointments'>Dashboard</Link></li>
                     <li><Link to='/about'>About</Link></li>
-                    <li><Link>Appointment</Link></li>
                     <li><Link>Reviews</Link></li>
                     <li><Link>Contact Us</Link></li>
                     {
