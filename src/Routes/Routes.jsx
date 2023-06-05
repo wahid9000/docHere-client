@@ -8,8 +8,8 @@ import About from "../Pages/About/About";
 import PrivateRoute from "./PrivateRoute";
 import BookAppointment from "../Pages/BookAppointment/BookAppointment/BookAppointment";
 import Dashboard from "../Layout/Dashboard";
-import MyAppointments from "../Pages/Dashboard/myAppointments";
 import AllUsers from "../Pages/Dashboard/Admin/AllUsers/AllUsers";
+import MyAppointments from "../Pages/Dashboard/MyAppointments";
 
 
 const router = createBrowserRouter([

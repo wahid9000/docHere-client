@@ -10,12 +10,6 @@ const useAppointment = () => {
     const { data: bookedAppointments = []} = useQuery({
         queryKey: ['bookedAppointments', user?.email],
         enabled: !loading,
-        // queryFn: async () => {
-        //     const res = await fetch(`http://localhost:5000/bookedAppointments?email=${user?.email}`, {headers: {
-        //         authorization: `bearer ${token}`
-        //     }});
-        //     return res.json();
-        // }
         queryFn: async() => {
             const res = await axiosSecure(`/bookedAppointments?email=${user?.email}`)
             return res.data;
@@ -24,3 +18,15 @@ const useAppointment = () => {
     return [bookedAppointments]
 }
 export default useAppointment;
+
+
+
+
+
+
+        // queryFn: async () => {
+        //     const res = await fetch(`http://localhost:5000/bookedAppointments?email=${user?.email}`, {headers: {
+        //         authorization: `bearer ${token}`
+        //     }});
+        //     return res.json();
+        // }

@@ -8,32 +8,79 @@ const useAxiosSecure = () => {
     const navigate = useNavigate();
 
     const axiosSecure = axios.create({
-        baseURL: 'http://localhost:5000'
+        baseURL: 'http://localhost:5000',
     })
 
     useEffect(() => {
+
         axiosSecure.interceptors.request.use(request => {
             const token = localStorage.getItem('access-token');
             if (token) {
-                request.headers.Authorization = `Bearer ${token}`
+                request.headers.Authorization = `bearer ${token}`
             }
             return request;
         })
 
-        axiosSecure.interceptors.response.use(
-            (response) => response,
-            async (error) => {
-                console.log(error);
-                if (error.response && (error.response.status === 401 || error.response.status === 403)) {
-                    await logOut();
-                    navigate('/login')
-                }
-                return Promise.reject(error)
+        axiosSecure.interceptors.response.use(response => response, async (error) => {
+            console.log(error);
+            if (error.response && (error.response.status === 401 || error.response.status === 403)) {
+                await logOut();
+                navigate('/login')
             }
-        );
-    }, [logOut, navigate, axiosSecure]);
+        }
+
+        )
+    }, [logOut, navigate, axiosSecure])
 
     return [axiosSecure];
+
 }
 
+
 export default useAxiosSecure;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//     const axiosSecure = axios.create({
+//         baseURL: 'http://localhost:5000'
+//     })
+
+//     useEffect(() => {
+//         axiosSecure.interceptors.request.use(request => {
+//             const token = localStorage.getItem('access-token');
+//             if (token) {
+//                 request.headers.Authorization = `Bearer ${token}`
+//             }
+//             return request;
+//         })
+
+//         axiosSecure.interceptors.response.use(
+//             (response) => response,
+//             async (error) => {
+//                 console.log(error);
+//                 if (error.response && (error.response.status === 401 || error.response.status === 403)) {
+//                     await logOut();
+//                     navigate('/login')
+//                 }
+//                 return Promise.reject(error)
+//             }
+//         );
+//     }, [logOut, navigate, axiosSecure]);
+
+//     return [axiosSecure];
+// }
+
+// 
