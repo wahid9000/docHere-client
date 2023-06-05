@@ -1,6 +1,7 @@
 import { Link, Outlet } from "react-router-dom";
 import Navbar from "../Pages/Shared/Navbar/Navbar";
 import useAdmin from "../hooks/useAdmin";
+import { FaBars } from "react-icons/fa";
 
 const Dashboard = () => {
 
@@ -11,11 +12,18 @@ const Dashboard = () => {
     return (
         <div>
             <Navbar></Navbar>
+
+
             <div className="drawer drawer-mobile bg-slate-100">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-                <div className="drawer-content flex flex-col mt-24 p-12">
-                    <Outlet></Outlet>
-                    <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
+                <div className="drawer-content flex flex-col">
+                    <div>
+                        <label htmlFor="my-drawer-2" className="btn lg:hidden mt-24 ml-4"><FaBars></FaBars></label>
+                    </div>
+                    <div className="md:mt-32 p-5">
+                        <Outlet></Outlet>
+                    </div>
+
 
                 </div>
                 <div className="drawer-side">
