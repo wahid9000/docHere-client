@@ -1,12 +1,16 @@
 import { Helmet } from "react-helmet-async";
 import PageHeader from "../../../Components/PageHeader/PageHeader";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useLocation } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
+import useScrollTop from "../../../hooks/useScrollTop";
 
 
 const BookAppointment = () => {
+    
+    const { pathName } = useLocation();
+    useScrollTop(pathName);
     const { user } = useContext(AuthContext)
     const doctorInfo = useLoaderData();
     const { name, service } = doctorInfo;

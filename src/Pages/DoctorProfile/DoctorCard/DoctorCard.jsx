@@ -1,9 +1,12 @@
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
 import { FaSearchLocation } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import useScrollTop from '../../../hooks/useScrollTop';
 
 const DoctorCard = ({ doctorsInfo }) => {
+    const { pathName } = useLocation();
+    useScrollTop(pathName);
     const { image, name, doctor_level, ratings, location, services, price, _id, service } = doctorsInfo;
     return (
         <div className='md:h-[400px] card mx-auto border p-8 my-10 w-11/12 md:w-9/12 bg-slate-100'>
