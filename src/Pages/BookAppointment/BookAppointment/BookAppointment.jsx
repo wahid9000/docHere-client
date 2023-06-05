@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import PageHeader from "../../../Components/PageHeader/PageHeader";
-import { useLoaderData, useLocation } from "react-router-dom";
+import { useLoaderData, useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
@@ -11,6 +11,7 @@ const BookAppointment = () => {
     
     const { pathName } = useLocation();
     useScrollTop(pathName);
+    const navigate = useNavigate();
     const { user } = useContext(AuthContext)
     const doctorInfo = useLoaderData();
     const { name, service } = doctorInfo;
@@ -34,6 +35,7 @@ const BookAppointment = () => {
             .then(data => {
                 console.log(data);
                 if (data.insertedId) {
+                    navigate('/dashboard/myAppointments')
                     Swal.fire({
                         title: 'Success!',
                         text: 'Your appointment has been booked successfully',

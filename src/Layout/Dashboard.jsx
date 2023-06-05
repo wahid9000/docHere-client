@@ -26,7 +26,7 @@ const Dashboard = () => {
                             isAdmin ?
                                 <>
                                     <li><Link className="text-xl" to='/dashboard/allUsers'>AllUsers</Link></li>
-                                    <li><Link className="text-xl" to='/dashboard/myAppointments'>Add a Doctor</Link></li>
+                                    <li><Link className="text-xl" to='/dashboard/addDoctor'>Add a Doctor</Link></li>
                                     <li><Link className="text-xl" to='/dashboard/myAppointments'>Manage Doctors</Link></li>
                                 </>
                                 :

@@ -1,15 +1,38 @@
 
 import { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
+import useAdmin from '../../../hooks/useAdmin';
+import Swal from 'sweetalert2';
 
 
 const Navbar = () => {
     const { logOut, user } = useContext(AuthContext)
+    const navigate = useNavigate();
+    const [isAdmin] = useAdmin()
     const handleLogout = () => {
-        logOut()
-            .then(() => { })
-            .catch(error => console.log(error))
+        Swal.fire({
+            title: 'Log Out?',
+            text: "You Will be redirected to Login Page",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'LogOut'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                logOut()
+                    .then(() => {
+                        navigate('/login')
+                        Swal.fire(
+                            'Logged Out!',
+                            'You have Logged Out Successfully',
+                            'success'
+                        )
+                    })
+                    .catch(error => console.log(error))
+            }
+        })
     }
 
     return (
