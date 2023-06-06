@@ -3,14 +3,43 @@ import { useForm } from "react-hook-form";
 import useAxiosSecure from "../../../../hooks/useAxiosSecure";
 import Swal from "sweetalert2";
 
+const image_hosting_token = import.meta.env.VITE_IMAGE_UPLOAD_TOKEN;
+
 const AddDoctor = () => {
     const [axiosSecure] = useAxiosSecure();
+    const img_hosting_url = `https://api.imgbb.com/1/upload?key=${image_hosting_token}`
 
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        console.log(data);
+        const formData = new FormData();
+        formData.append('image', data.image[0])
 
-        
+        fetch(img_hosting_url, {
+            method: "POST",
+            body: formData
+        })
+            .then(res => res.json())
+            .then(imgResponse => {
+                if (imgResponse.success) {
+                    const imgUrl = imgResponse.data.display_url;
+                    const { name, service, doctor_level } = data;
+                    const doctorData = { name, service, doctor_level, image: imgUrl }
+                    console.log(doctorData);
+                    axiosSecure.post('/doctors', doctorData)
+                        .then(res => {
+                            console.log(res.data);
+                            if (res.data.insertedId) {
+                                reset();
+                                Swal.fire({
+                                    title: 'Success!',
+                                    text: 'Doctor Has Been Inserted',
+                                    icon: 'success',
+                                    confirmButtonText: 'Continue'
+                                })
+                            }
+                        })
+                }
+            })
 
 
 
@@ -18,15 +47,15 @@ const AddDoctor = () => {
         // axiosSecure.post('/doctors')
         //     .then(data => {
         //         console.log(data.data)
-                // if (res.data.insertedId) {
-                //     Swal.fire({
-                //         title: 'Success!',
-                //         text: 'Doctor Has Been Inserted',
-                //         icon: 'success',
-                //         confirmButtonText: 'Continue'
-                //     })
-                // }
-            // })
+        // if (res.data.insertedId) {
+        //     Swal.fire({
+        //         title: 'Success!',
+        //         text: 'Doctor Has Been Inserted',
+        //         icon: 'success',
+        //         confirmButtonText: 'Continue'
+        //     })
+        // }
+        // })
     };
 
 

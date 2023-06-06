@@ -16,7 +16,7 @@ const OverView = ({ doctorsInfo }) => {
             <div>
                 <h2 className="text-2xl font-bold mb-3">Awards</h2>
                 {
-                    awards.map(award => <li key={award._id}>{award}</li>)
+                    awards?.map(award => <li key={award._id}>{award}</li>)
                 }
             </div>
 

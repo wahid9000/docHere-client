@@ -12,7 +12,7 @@ const BookingTime = ({doctorsInfo}) => {
                 <h2 className="text-2xl font-bold mb-5">Days Of Availability</h2>
                 <div className="flex gap-10">
                     {
-                    available_days.map(days => <div className="p-3 rounded-lg border-orange-600 border" key={days._id}>{days}</div>)
+                    available_days?.map(days => <div className="p-3 rounded-lg border-orange-600 border" key={days._id}>{days}</div>)
 
                 }
                 </div>

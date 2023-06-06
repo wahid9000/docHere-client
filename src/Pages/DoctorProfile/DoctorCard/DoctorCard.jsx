@@ -7,7 +7,7 @@ import useScrollTop from '../../../hooks/useScrollTop';
 const DoctorCard = ({ doctorsInfo }) => {
     const { pathName } = useLocation();
     useScrollTop(pathName);
-    const { image, name, doctor_level, ratings, location, services, price, _id, service } = doctorsInfo;
+    const { image, name, doctor_level, ratings, location, price, _id, service } = doctorsInfo;
     return (
         <div className='md:h-[400px] card mx-auto border p-8 my-10 w-11/12 md:w-9/12 bg-slate-100'>
             <div className="grid md:grid-cols-2 items-center gap-5 md:gap-10">
@@ -26,18 +26,8 @@ const DoctorCard = ({ doctorsInfo }) => {
                     </p>
                     <p className='text-lg font-semibold mb-2'>{price}</p>
                     <p className='flex justify-start items-center gap-2 text-lg font-semibold '><FaSearchLocation></FaSearchLocation> {location}</p>
-                    <div className='grid md:grid-cols-3 mt-5 gap-2'>
-                        {
-                            services?.map(service => <div key={service._id}>
-                                <div className='border text-center md:p-3 rounded-lg'>
-                                {service}
-                                </div>
-                                
-                            </div>)
-                        }
-                    </div>
                     <div className='text-center'>
-                        <Link to={`/bookAppointment/${_id}`}><button className='btn btn-block btn-primary bg-[#35354b] mt-5'>Book Appointment</button></Link>
+                        <Link to={`/bookAppointment/${_id}`}><button className='btn btn-block btn-primary bg-[#35354b] mt-24'>Book Appointment</button></Link>
                     </div>
                 </div>
 
