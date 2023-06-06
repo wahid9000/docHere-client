@@ -1,9 +1,33 @@
+
 import { useForm } from "react-hook-form";
+import useAxiosSecure from "../../../../hooks/useAxiosSecure";
+import Swal from "sweetalert2";
 
 const AddDoctor = () => {
+    const [axiosSecure] = useAxiosSecure();
 
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => {
+        console.log(data);
+
+        
+
+
+
+
+        // axiosSecure.post('/doctors')
+        //     .then(data => {
+        //         console.log(data.data)
+                // if (res.data.insertedId) {
+                //     Swal.fire({
+                //         title: 'Success!',
+                //         text: 'Doctor Has Been Inserted',
+                //         icon: 'success',
+                //         confirmButtonText: 'Continue'
+                //     })
+                // }
+            // })
+    };
 
 
     return (
@@ -25,8 +49,7 @@ const AddDoctor = () => {
 
                     <div className="form-control">
                         <label>Service Name:</label>
-                        <select {...register("service", { required: true })} className="select select-bordered w-full max-w-md mt-3">
-                            <option disabled selected>Select Service</option>
+                        <select defaultValue={'Select Service'} {...register("service", { required: true })} className="select select-bordered w-full max-w-md mt-3">
                             <option>Teeth Orthodontics</option>
                             <option>Cosmetic Dentisty</option>
                             <option>Teeth Cleaning</option>
@@ -37,7 +60,8 @@ const AddDoctor = () => {
                     </div>
 
                     <div className="form-control">
-                        <input type="file" {...register("image", { required: true })} className="file-input file-input-bordered w-full max-w-xs" />
+                        <label>Upload Photo:</label>
+                        <input type="file" {...register("image", { required: true })} className="mt-3 file-input file-input-bordered w-full max-w-md" />
                     </div>
 
                     <input className="btn" type="submit" />

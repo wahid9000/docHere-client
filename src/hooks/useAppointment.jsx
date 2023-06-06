@@ -24,9 +24,9 @@ export default useAppointment;
 
 
 
-        // queryFn: async () => {
-        //     const res = await fetch(`http://localhost:5000/bookedAppointments?email=${user?.email}`, {headers: {
-        //         authorization: `bearer ${token}`
-        //     }});
-        //     return res.json();
-        // }
+// queryFn: async () => {
+//     const res = await fetch(`http://localhost:5000/bookedAppointments?email=${user?.email}`, {headers: {
+//         authorization: `bearer ${token}`
+//     }});
+//     return res.json();
+// }
